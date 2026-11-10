@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Học web chuẩn - My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 30px 0;
+        }
+
+        /* Khung chứa Portfolio */
+        .portfolio {
+            width: 1110px;
+            margin: 0 auto;
+        }
+
+        /* Tiêu đề chính */
+        .portfolio h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222222;
+            text-align: center;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+
+        /* Thanh gạch nhỏ màu xanh ngọc dưới tiêu đề */
+        .portfolio h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #359a9a;
+            margin: 10px auto 0;
+        }
+
+        /* Thanh menu tab lọc */
+        .portfolio .list-tab {
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .portfolio .list-tab li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .portfolio .list-tab li a {
+            text-decoration: none;
+            color: #444444;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+
+        /* Mục All được chọn mặc định và hiệu ứng khi hover */
+        .portfolio .list-tab li:first-child a,
+        .portfolio .list-tab li.active a,
+        .portfolio .list-tab li a:hover {
+            color: #359a9a;
+        }
+
+        /* Bộ sưu tập hình ảnh Gallery */
+        .portfolio .galerry {
+            list-style-type: none;
+            overflow: hidden; /* Clearfix cho các thẻ li float */
+        }
+
+        .portfolio .galerry li {
+            float: left;
+            width: 350px;
+            margin-right: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* Cứ mỗi 3 ảnh thì ảnh thứ 3 bỏ margin-right để vừa khít hàng */
+        .portfolio .galerry li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .portfolio .galerry li a {
+            display: block;
+        }
+
+        .portfolio .galerry li img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio">
+        <h2>MY PORTFOLIO</h2>
+
+        <ul class="list-tab">
+            <li class="active"><a href="./">All</a></li>
+            <li><a href="./">Web App</a></li>
+            <li><a href="./">UI/UX</a></li>
+            <li><a href="./">Graphics Design</a></li>
+            <li><a href="./">Mobile App</a></li>
+            <li><a href="./">Branding</a></li>
+            <li><a href="./">Marketing</a></li>
+        </ul>
+
+        <ul class="galerry">
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="Portfolio Item"></a></li>
+        </ul>
+    </section>
+</body>
+</html>

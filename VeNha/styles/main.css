@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    padding: 30px 0;
+}
+
+/* i. Khung chứa lớn: kích thước: 1024px; margin; canh lề */
+#root {
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ii. site-header: canh lề; margin; background: màu, hình; màu; text-shadow */
+#site-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #cccccc url('../imgs/logo.png') no-repeat calc(50% - 110px) center;
+    background-size: 35px auto;
+    color: #333333;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ffffff;
+    padding: 10px 0;
+    line-height: 1.4;
+}
+
+/* Danh sách superheroes */
+.superheroes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* iii. li trong superheroes: width; display; position */
+.superheroes li {
+    width: 175px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 6px;
+    transition: width 0.3s ease;
+}
+
+/* Tiêu đề nhân vật trên đầu ảnh */
+.superheroes .hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    color: #cccccc;
+    font-size: 14px;
+    padding: 6px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* iv. Hình trong superheroes: border; max-width */
+.superheroes img {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* v. Thẻ a trong superheroes: display; width; color; text-decoration */
+.superheroes a {
+    display: none;
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #636363;
+    padding: 8px 0;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* vi. Hover: */
+/* 1. Làm Read more: hiển thị; hiển thị underline */
+.superheroes li:hover a {
+    display: block;
+    text-decoration: underline;
+}
+
+/* 2. Làm cho li trong superheroes: tăng chiều rộng */
+.superheroes li:hover {
+    width: 230px;
+}
+
+.superheroes li:hover .hero-header {
+    background: #1a1a1a;
+    color: #ffffff;
+}
